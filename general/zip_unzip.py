@@ -1,8 +1,14 @@
+import os
 import zipfile
 
 #Zip
-filenames = [ "main.py", "requirements.txt", ".gitignore","bigquery_schema","table_module.py","load_module.py"]
-targetdir = "/Users/josimardossantosjunior/Code/DataEngineeringOnGCP/cloud-function/cloud-function.zip"
+
+
+
+# print('Get current working directory : ', os.getcwd())
+
+filenames = [ "main.py", "requirements.txt",".gitignore", "bigquery_schema/avg_delay_flight_nums.json", "table_module.py", "load_module.py"]
+targetdir = "/Users/josimardossantosjunior/Code/general_project/cloud-function/cloud-function.zip"
 with zipfile.ZipFile(targetdir, mode="w") as archive:
     for filename in filenames:
         archive.write(filename)
