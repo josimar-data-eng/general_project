@@ -1,0 +1,35 @@
+
+
+## Pipeline Description
+### It's a pipeline that uses Cloud SDK to execute a function to get a JSON file once it's stored in the Bucket, transform it in Dataframe, include a column as a timestamp (to give us the knowledge about when this specific row was loaded), and load the DF IN BigQuery, using write_truncate in the write-disposition.
+
+
+
+## Project Structure
+
+### cloud-function/
+### └── bigquery_schema/
+###     └── schema.json/
+### ├── dataset_module.py
+### └── load_module.py
+### └── table_module.py
+### └── main.py
+### └── requitements.txt
+
+#### dataset_module: has a method to create the dataset.
+#### load_module: has methods to load data from either uri or dataframe.
+#### table_module: has methos to both create table and generate schema for it using json schema from bigquery_schemas folder.
+#### main: call all these methods.
+
+### Resources: Python, Cloud Function, Cloud SDK, BigQuery
+
+## Cloud Function Deployment
+
+gcloud functions deploy function-flight-data-1sgen \
+--source={my-path}/cloud-function \
+--runtime python310 \
+--region=us-central1 \
+--allow-unauthenticated \
+--entry-point=load \
+--trigger-resource flights-data-out \
+--trigger-event google.storage.object.finalize
