@@ -6,9 +6,9 @@ pip3 install -r requirements.txt  	--> Run all the libraries in the venv environ
 
 
 # Create Venv
-venv directory: python3 -m venv env01
-venv directory: source env01/bin/activate  → activate the vm
-deactivate 	  : deactivate the vm
+venv directory   : python3 -m venv env01
+venv directory   : source env01/bin/activate  → activate the vm
+deactivate the vm: deactivate
 
 python3 -m venv data-eng-gcp && source data-eng-gcp/bin/activate 
 
