@@ -1,0 +1,1 @@
+gsutil cp /Users/josimardossantosjunior/Downloads/avg.json gs://flights-data-out

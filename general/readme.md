@@ -6,9 +6,9 @@ pip3 install -r requirements.txt  	--> Run all the libraries in the venv environ
 
 
 # Create Venv
-venv directory: python3 -m venv env01
-venv directory: source env01/bin/activate  → activate the vm
-deactivate 	  : deactivate the vm
+venv directory   : python3 -m venv env01
+venv directory   : source env01/bin/activate  → activate the vm
+deactivate the vm: deactivate
 
 python3 -m venv data-eng-gcp && source data-eng-gcp/bin/activate 
 
@@ -44,22 +44,33 @@ gcloud functions deploy test-function \
 rm /Users/josimardossantosjunior/Code/DataEngineeringOnGCP/cloud-function/cloud-function.zip && \
 
 
-# Deployment to gcf
+# Deployment of cloud-function
 
+
+## Start cloud SDK throug gcloud init
+export PATH="/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH" && gcloud init
+
+
+## Cloud Function
 -- Zip file: Remove zip file
 -- Zip it again (update) running zip_unzip.py script
 -- Provision Cloud Function through "gcloud functions deploy" command
 
-rm /Users/josimardossantosjunior/Code/DataEngineeringOnGCP/cloud-function/cloud-function.zip && \
-python3 /Users/josimardossantosjunior/Code/DataEngineeringOnGCP/zip_unzip.py && \
-gcloud functions deploy function-1sgen-flight-data \
---source=/Users/josimardossantosjunior/Code/DataEngineeringOnGCP/cloud-function \
+rm /Users/josimardossantosjunior/Code/general_project/cloud-function/cloud-function.zip && \
+cd /Users/josimardossantosjunior/Code/general_project/cloud-function && \
+python3 /Users/josimardossantosjunior/Code/general_project/general/zip_unzip.py && \
+gcloud functions deploy function-flight-data-1sgen \
+--source=/Users/josimardossantosjunior/Code/general_project/cloud-function \
 --runtime python310 \
 --region=us-central1 \
 --allow-unauthenticated \
 --entry-point=load \
 --trigger-resource flights-data-out \
 --trigger-event google.storage.object.finalize
+
+## As cloud-function get file from output bucket, we need to sendo it to there as a test via gsutil
+gsutil cp /Users/josimardossantosjunior/Downloads/avg.json gs://flights-data-out
+
 
 # How to set runtime environment variables in cloud-functions via Cloud SSK - 
 -set-env-vars FOO=bar,BAZ=boo FLAGS...

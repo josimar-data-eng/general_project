@@ -17,5 +17,10 @@
     "mode": "REQUIRED",
     "name": "flight_date",
     "type": "DATE"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "load_datetime",
+    "type": "DATETIME"
   }
 ]

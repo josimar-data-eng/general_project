@@ -17,5 +17,10 @@
     "mode": "REQUIRED",
     "name": "distance_category",
     "type": "INTEGER"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "load_datetime",
+    "type": "DATETIME"
   }
 ]
