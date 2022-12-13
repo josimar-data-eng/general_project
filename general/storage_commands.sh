@@ -1,10 +1,9 @@
-gsutil mb -c standard -l us-central1 -p qas-project-363822 gs://flights-data-in &&\
-gsutil mb -c standard -l us-central1 -p qas-project-363822 gs://flights-data-out &&\
-gsutil mb -c standard -l us-central1 -p qas-project-363822 gs://flights-data-job 
+gsutil mb -c standard -l us-central1 -p dev-project-363923 gs://flights-dev-data-in &&\
+gsutil mb -c standard -l us-central1 -p dev-project-363923 gs://flights-dev-data-out &&\
+gsutil mb -c standard -l us-central1 -p dev-project-363923 gs://flights-dev-data-proc-job 
 
-cd /Users/josimardossantosjunior/Code/DataEngineeringOnGCP/flights-data
+cd /Users/josimardossantosjunior/Code/general_project/flight_elt_job/flights-data
 gsutil cp *.json gs://flights-data-in
-
 
 gsutil cp main.py flights_etl.py gs://flights-data-job
 
