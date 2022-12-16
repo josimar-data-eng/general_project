@@ -1,3 +1,4 @@
 cloud-function/.DS_Store
 send_file.sh
 gcloud_init.sh
+venv-data-eng-gcp
