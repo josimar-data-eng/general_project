@@ -3,3 +3,4 @@ send_file.sh
 gcloud_init.sh
 venv-data-eng-gcp/
 .gitignore
+.DS_Store
