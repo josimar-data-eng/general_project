@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_airport_city
+    schema: covid19_geotab_mobility_impact
+    database: bigquery-public-data
+    tables:
+      - name: airport_traffic
+      - name: city_congestion

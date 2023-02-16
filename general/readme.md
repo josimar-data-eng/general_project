@@ -75,3 +75,10 @@ gsutil cp /Users/josimardossantosjunior/Downloads/avg.json gs://flights-data-out
 # How to set runtime environment variables in cloud-functions via Cloud SSK - 
 -set-env-vars FOO=bar,BAZ=boo FLAGS...
 https://cloud.google.com/functions/docs/configuring/env-var#gcloud
+
+### PULUMI ###
+
+Configure Pulumi to access your Google Cloud account
+1 - Configure SDK first
+
+2 - pulumi config set gcp:project dbt-learning-377715 && export GOOGLE_PROJECT=dbt-learning-377715
