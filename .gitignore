@@ -6,5 +6,3 @@ venv-data-eng-gcp/
 .DS_Store
 gcloud_init.sh
 send_file.sh
-dbt/dbt-env
-dbt/dbt-learning-377715-33812b6b9a5a.json
