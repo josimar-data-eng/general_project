@@ -1,0 +1,5 @@
+logs/
+target/
+dbt-env/
+dbt_packages/
+dbt-learning-377715-33812b6b9a5a.json
