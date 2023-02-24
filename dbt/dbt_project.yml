@@ -38,3 +38,12 @@ models:
   dbt_learning:
     raw:
       +materialized: table
+
+    staging:
+      lodgify:
+        +schema: stg_lodgify
+
+seeds:
+  dbt_learning:
+    lodgify:
+      schema: raw_lodgify
