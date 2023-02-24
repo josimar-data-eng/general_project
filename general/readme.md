@@ -82,3 +82,7 @@ Configure Pulumi to access your Google Cloud account
 1 - Configure SDK first
 
 2 - pulumi config set gcp:project dbt-learning-377715 && export GOOGLE_PROJECT=dbt-learning-377715
+
+3 - pulumi new gcp-project -> Create project
+
+4 - pulumi up -> Deploy

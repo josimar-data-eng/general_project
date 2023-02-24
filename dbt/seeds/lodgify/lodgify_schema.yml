@@ -1,0 +1,30 @@
+version: 2
+
+seeds:
+  - name: bookings
+    description: Map manual employee
+    columns:
+      - name: subscriber_id
+        description: Employee identification.
+        tests:
+          - not_null
+      - name: booking_status
+        description: Employee identification.
+      - name: booking_date
+        description: Employee identification.
+        tests:
+          - not_null
+
+  - name: subscription
+    description: Map manual employee
+    columns:
+      - name: sub_id
+        description: Employee identification.
+        tests:
+          - not_null
+      - name: status
+        description: Employee identification.
+      - name: dates
+        description: Employee identification.
+        tests:
+          - not_null

@@ -1,0 +1,6 @@
+name: pulumi-gcp-python-project-2
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A minimal Google Cloud Python Pulumi program
