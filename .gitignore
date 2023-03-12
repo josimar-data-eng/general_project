@@ -6,3 +6,4 @@ venv-data-eng-gcp/
 .DS_Store
 gcloud_init.sh
 send_file.sh
+general/data_manipulation

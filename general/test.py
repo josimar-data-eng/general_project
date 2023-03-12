@@ -18,14 +18,20 @@ from datetime import datetime
 
 
 # Json with multile rows
-json_list = []
-with open("avg.json") as file:
-    for each_row in file:
-        dict_file = json.loads(each_row)
-        json_list.append(dict_file)
+# json_list = []
+# with open("avg.json") as file:
+#     for each_row in file:
+#         dict_file = json.loads(each_row)
+#         json_list.append(dict_file)
 
-avg_df = pd.DataFrame(json_list)
-avg_df["load_datetime"] = datetime.now()
+# avg_df = pd.DataFrame(json_list)
+# avg_df["load_datetime"] = datetime.now()
 
-print(avg_df)
+# print(avg_df)
+
+
+def func(num: int):
+    print(num * 2)
+func(float(3.14))
+
 
