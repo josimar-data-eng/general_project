@@ -7,4 +7,5 @@ venv-data-eng-gcp/
 gcloud_init.sh
 send_file.sh
 general/data_manipulation
+general/test
 python-algorithms/

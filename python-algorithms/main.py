@@ -1,10 +1,17 @@
-# from solutions import Solution
+from solutions import Solution
 
-# solution = Solution() #instantiating a class
-# # solution.move_zeros([0,0,4,6,2,0,2,0]) #calling a method from the class instantieded
+solution = Solution() #instantiating a class
 
-# solution.boats_to_save([3,2,1,2,2,1],4)
-
+# print(solution.reverse_integer(-123))
+# print(solution.add_strings("123","1"))
+# solution.move_zeros([0,0,4,6,2,0,2,0,2])
+# solution.boats_to_save([10,10,20,30,30],30)
+# print(solution.valid_palindrome("radkkalr"))
+# print(solution.monotonic_array([1,2,3,4,4]))
+# print(solution.bubble_sort([0,0,4,6,2,10,2,-1,2]))
+# print(solution.fill_blanks([1,2,None, None, 3, 4, None]))
+# print(solution.match_mismatch("My name is JJ","My name are there"))
+# print(solution.average_w_length("Hi all, my name is Tom...I am originally from Australia."))
 
 
 #================== iterator ==================#
