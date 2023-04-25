@@ -14,71 +14,33 @@ solution = Solution() #instantiating a class
 # print(solution.average_w_length("Hi all, my name is Tom...I am originally from Australia."))
 
 
+#================== iterator ==================#
 
-# d = 3
-# temp = []
-# temp2 = []
-# a = [1,2,3,4,5]
+my_list = [1,2,3,4]
+my_iterator = iter(my_list)
 
-# print("original: ",a)
-
-# print("shift to right")
-# for i in range(len(a)-d,len(a)):
-#     temp.append(a[i])
-# temp.extend(a[0:len(a)-d])
-# print(temp)
-
-# print("shift to left")
-# for i in range(d,len(a)):
-#     temp2.append(a[i])
-# temp2.extend(a[0:d])
-# print(temp2)
-
-
-# 1)ANAGRAM NERD WALLET
-# Input: strs = ["eat","tea","tan","ate","nat","bat"]
-# Output:       [["bat"],["nat","tan"],["ate","eat","tea"]] 
-a = ["eat","tea","tan","ate","nat","bat"]
-print(sorted(a[1]))
-def anagram(anagram_list):
-    list_output = []
-    temp_list_output = []
-    for i in anagram_list:
-        for j in anagram_list:
-            if (sorted(i)==sorted(j)): # and j not in temp_list_output):
-                temp_list_output.append(j)        
-        temp_list_output = list(set(temp_list_output))                
-        if temp_list_output not in list_output:
-            list_output.append(temp_list_output)
-        temp_list_output = []
-    return list_output
-# print(anagram(["eat","tea","tan","ate","nat","bat"]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-#======== ITERATOR =========#
-
-# my_list = [1,2,3,4]
-# my_iterator = iter(my_list)
-
-# # print(next(my_iterator))
-# # print(next(my_iterator))
-# # print(next(my_iterator))
-# # print(next(my_iterator))
-# # print(next(my_iterator))
+# print(next(my_iterator))
+# print(next(my_iterator))
+# print(next(my_iterator))
+# print(next(my_iterator))
+# print(next(my_iterator))
 
 # for i in my_iterator:
 #     print(i)
+
+#================== generator ==================#
+def my_generator(n):
+    value = 0
+    while value < n:
+        yield value
+        value += 1
+
+# iterate over the generator object produced by my_generator
+for value in my_generator(3):
+    print(value)
+
+
+
 
 
 # def calc(n):
