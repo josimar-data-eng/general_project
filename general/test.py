@@ -30,8 +30,28 @@ from datetime import datetime
 # print(avg_df)
 
 
-def func(num: int):
-    print(num * 2)
-func(float(3.14))
+# def func(num: int):
+#     print(num * 2)
+# func(float(3.14))
+# func(float(3.14))
 
 
+_list = [1,2,3,4,5]
+
+_tupe = (1,2,3,4,5)
+
+
+_list[0]=10
+print(_list)
+
+_tupe[0]=10
+print(_tupe)
+
+
+# for i in _list:
+#     print(i)
+#     i=10
+
+# # for i in _tupe:
+# #     print(i)
+#     i=10
