@@ -1,3 +1,16 @@
+How to start
+=============
+
+Run inside "astro" folder:
+
+export PATH="/opt/homebrew/bin:$PATH" && brew install astro
+
+astro dev init.: Initialize the development environment
+astro dev start: Build a project into a docker container and spinning up a local docker container for each airflow component.
+
+astro dev stop to finish!
+
+
 Overview
 ========
 
