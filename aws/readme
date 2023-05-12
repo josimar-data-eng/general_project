@@ -1,0 +1,8 @@
+
+## Install AWS CLI in order to interact with AWS services
+
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" && /
+sudo installer -pkg AWSCLIV2.pkg -target /
+
+check:
+which aws && aws --version
